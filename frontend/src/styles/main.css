@@ -1,0 +1,133 @@
+:root {
+  color-scheme: dark;
+  --bg-base: #0d1117;
+  --bg-panel: #161b22;
+  --bg-panel-soft: #1c2129;
+  --bg-input: #0f141b;
+  --border: #2a3038;
+  --border-strong: #3a4250;
+  --text: #e6edf3;
+  --text-dim: #9aa7b4;
+  --text-faint: #6b7785;
+  --accent: #4c8dff;
+  --accent-soft: rgba(76, 141, 255, 0.16);
+  --ok: #3fb950;
+  --warn: #d29922;
+  --error: #f85149;
+  --radius: 10px;
+  --mono: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+code,
+pre,
+.mono {
+  font-family: var(--mono);
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.panel-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex: none;
+}
+
+.dot.ok {
+  background: var(--ok);
+  box-shadow: 0 0 6px rgba(63, 185, 80, 0.6);
+}
+.dot.warn {
+  background: var(--warn);
+}
+.dot.error {
+  background: var(--error);
+}
+.dot.idle {
+  background: var(--text-faint);
+}
+
+/* Element Plus 深色微调 */
+.el-input__wrapper,
+.el-textarea__inner,
+.el-select__wrapper {
+  background-color: var(--bg-input) !important;
+  box-shadow: 0 0 0 1px var(--border) inset !important;
+}
+
+.el-textarea__inner {
+  font-family: inherit;
+}
+
+.el-card {
+  background: var(--bg-panel);
+  border-color: var(--border);
+}
+
+.el-table {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: var(--bg-panel-soft);
+  --el-table-border-color: var(--border);
+  --el-table-row-hover-bg-color: var(--bg-panel-soft);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #424b57;
+}

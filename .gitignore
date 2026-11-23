@@ -1,0 +1,41 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# ---- 配置与数据（含本地路径/潜在敏感信息）----
+.env
+.env.local
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/backups/
+
+# ---- 运行时产物 ----
+uploads/*
+!uploads/.gitkeep
+output/*
+!output/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# ---- 前端 ----
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# ---- 运行时状态 ----
+.run/
+
+# ---- 系统文件 ----
+.DS_Store
+Thumbs.db
+
+# ---- 编辑器 ----
+.idea/
+.vscode/
+*.swp
